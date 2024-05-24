@@ -1,26 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
-    public float interactDiastance = 5f;
+    public Text interactionText;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Ray ray = new Ray(transform.position, transform.forward);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, interactDiastance))
-            {
-                if (hit.collider.CompareTag("Door"))
-                {
-                    hit.collider.transform.parent.GetComponent<Door>().ChangeDoorState();
-                }
-            }
-        }
-
+        
     }
-   
+
+    void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.layer == 6)
+        {
+            interactionText.text = "(E) " + other.gameObject.name;
+        }              
+    }
+    void OnTriggerExit(Collider other)
+    {
+        interactionText.text = "";
+    }
+
+
 }

@@ -7,13 +7,13 @@ public class PlayerMove : MonoBehaviour
     Rigidbody rb;
 
     [Header("Rotate")]
-    public float mouseSpeed;
+    public float mouseSpeed = 50f;
     float yRotation;
     float xRotation;
     Camera cam;
 
     [Header("Move")]
-    public float moveSpeed;
+    public float moveSpeed = 3.5f;
     float h;
     float v;
 
@@ -39,7 +39,8 @@ public class PlayerMove : MonoBehaviour
     {
         Rotate();
         Move();
-        
+        run();
+
         // 플레이어의 아래 방향으로 레이를 발사하여 지면과 충돌하는지 확인
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f);
 
@@ -78,5 +79,17 @@ public class PlayerMove : MonoBehaviour
     void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); // 힘을 가해 점프
+    }
+
+    void run()
+    {
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            moveSpeed = 6f;
+        }
+        else
+        {
+            moveSpeed = 3.5f;
+        }
     }
 }
