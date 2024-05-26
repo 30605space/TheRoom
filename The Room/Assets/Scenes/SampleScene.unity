@@ -710,7 +710,7 @@ GameObject:
   - component: {fileID: 1034143435}
   m_Layer: 0
   m_Name: HitBox
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,8 +749,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999998, y: 1, z: 1.0756559}
+  m_Center: {x: 0, y: 0, z: 0.037828196}
 --- !u!114 &1034143435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,7 +1059,7 @@ GameObject:
   - component: {fileID: 2003643600}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2981,7 +2981,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010956556085}
   - component: {fileID: 65000010450153041}
-  - component: {fileID: 114000012517760529}
   m_Layer: 8
   m_Name: 'doorR_interact '
   m_TagString: Untagged
@@ -3232,7 +3231,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011927712145}
   - component: {fileID: 65000013194854877}
-  - component: {fileID: 114000013095303773}
   m_Layer: 8
   m_Name: doorL_interact
   m_TagString: Untagged
@@ -13572,18 +13570,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000012517760529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012871844447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000012535005571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13639,18 +13625,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000011622621973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114000013095303773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013170515677}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
