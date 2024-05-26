@@ -18,12 +18,13 @@ public class Interaction : MonoBehaviour
         {
             interactionText.text = "(E) " + other.gameObject.name; 
             if(Input.GetKeyDown(KeyCode.E) && other.gameObject.GetComponent<Animator>().GetBool("DoorOpen") == false)
-            {              
-                other.gameObject.GetComponent<Animator>().SetBool("DoorOpen", true);
+            {
+                Debug.Log("111111111111111111");
+                other.GetComponent<Animator>().SetBool("DoorOpen", true);
             }
             if (Input.GetKeyDown(KeyCode.E) && other.gameObject.GetComponent<Animator>().GetBool("DoorOpen") == true)
             {
-                other.gameObject.GetComponent<Animator>().SetBool("DoorOpen", false);
+                other.GetComponent<Animator>().SetBool("DoorOpen", false);
             }
         }              
     }
