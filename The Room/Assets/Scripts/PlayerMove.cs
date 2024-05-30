@@ -24,6 +24,8 @@ public class PlayerMove : MonoBehaviour
     public float playerHeight;
     bool grounded;
 
+    bool sitOn = false;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;   // 마우스 커서를 화면 안에서 고정
@@ -40,6 +42,7 @@ public class PlayerMove : MonoBehaviour
         Rotate();
         Move();
         run();
+        sit();
 
         // 플레이어의 아래 방향으로 레이를 발사하여 지면과 충돌하는지 확인
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f);
@@ -91,5 +94,21 @@ public class PlayerMove : MonoBehaviour
         {
             moveSpeed = 3.5f;
         }
+    }
+
+    void sit()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftControl) && sitOn == true)
+        {
+            this.gameObject.transform.localScale = new Vector3(0.8f, 0.5f, 0.8f);
+            sitOn = false;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftControl) && sitOn == false)
+        {
+            this.gameObject.transform.localScale = new Vector3(0.8f, 1f, 0.8f);
+            sitOn = true;
+        }
+
+
     }
 }
